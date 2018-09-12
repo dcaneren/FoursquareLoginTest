@@ -9,8 +9,8 @@ public class HomePageTest extends BaseTest {
 
     @BeforeMethod
     public void loginWithValidCredentials() throws InterruptedException {
-        this.loginPage.login("dgncnrn@gmail.com","asdf");
-        this.homePage = PageFactory.initElements(this.driver, HomePage.class); //this.driver.getCurrentUrl();
+        this.loginPage.login("abcd@gmail.com","asdf");
+        this.homePage = PageFactory.initElements(this.driver, HomePage.class);
     }
 
     @Test
