@@ -17,11 +17,6 @@ public class BaseTest extends Variables {
 
     // Global test data excel file
     public static final String testDataExcelFileName = "LoginData.xlsx";
-    /**
-     private String getDriverPath() {
-     String path = System.getProperty("user.dir");
-     return path + "/Users/Can/eclipse-photon-workspace/chromedriver";
-     }**/
 
     @BeforeClass
     public void writeTestBeginLog() {
