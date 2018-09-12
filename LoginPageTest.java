@@ -9,8 +9,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import utils.ExcelUtil;
-//import utils.ExcelDataProvider;
-//import utils.ExcelUtils;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -33,7 +31,6 @@ public class LoginPageTest extends BaseTest {
     public void setupTestData() throws Exception {
         //set test data excel and sheet
         System.out.println("''''''''''''Setup Test Level Data''''''''''''");
-        //ExcelUtils.setExcelFile("/Users/Can/IdeaProjects/foursquaretest/src/test/java/resources/", "LoginData.xlsx");
         ExcelUtil.setExcelFileSheet("Sheet1");
     }
 
@@ -42,7 +39,6 @@ public class LoginPageTest extends BaseTest {
         int i = 0;
         try{
             Object[][] x = FetchData();
-            //System.out.println(x.length);
 
             while(i < x.length){
                 // INVALID LOGIN
@@ -70,19 +66,17 @@ public class LoginPageTest extends BaseTest {
 
     @Test(priority = 2, enabled = false)
     public void loginWithValidCredentials() throws InterruptedException {
-        this.loginPage.login("dgncnrn@gmail.com","123456");
+        this.loginPage.login("abcd@gmail.com","123456");
     }
 
     @Test(priority = 1, enabled = false)
     public void loginWithInvalidUsername() throws Exception {
         Object[][] x = FetchData();
-
-        //this.loginPage.login(ExcelUtil.getCellData(1,1), ExcelUtil.getCellData(1, 2));
     }
 
     @Test(priority = 1, enabled = false)
     public void loginWithInvalidPassword() throws InterruptedException {
-        this.loginPage.login("dgncnrn@gmail.com","1234");
+        this.loginPage.login("abcd@gmail.com","1234");
     }
 
     @AfterTest
